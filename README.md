@@ -44,6 +44,31 @@ advanced-rag-enterprise/
 
 ---
 
+## Architecture
+
+## 3.1 Overall Advanced RAG Workflow
+
+The following diagram summarizes the complete workflow implemented in this assignment, starting from MedQuAD corpus ingestion and ending with grounded answer generation and evaluation.
+
+```mermaid
+flowchart LR
+    A[Download MedQuAD] --> B[Prepare Corpus]
+    B --> C[Create Metadata]
+    C --> D[Semantic Chunking]
+    D --> E[Build BM25 Index]
+    D --> F[Build FAISS Index]
+    E --> G[Hybrid Retrieval]
+    F --> G
+    G --> H[CrossEncoder Re-ranking]
+    H --> I[Context Assembly]
+    I --> J[Agentic Query Handling]
+    J --> K[Grounded Response]
+    K --> L[Evaluation & Analysis]
+```
+
+This workflow demonstrates the integration of **semantic chunking, hybrid sparse–dense retrieval, cross-encoder re-ranking, and agentic query processing** within a single Advanced RAG architecture.
+
+
 ## Notebook Sections
 
 The implementation is maintained in a **single Jupyter Notebook** for easy execution and submission.
