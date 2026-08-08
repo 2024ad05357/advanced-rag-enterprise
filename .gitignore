@@ -6,7 +6,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Large models and indexes
-models/
 indexes/
 
 # Temporary files
