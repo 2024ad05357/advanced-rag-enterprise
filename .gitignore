@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large models and indexes
+models/
+indexes/
+
+# Temporary files
+*.tmp
+*.log
