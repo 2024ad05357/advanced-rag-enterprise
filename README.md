@@ -113,8 +113,8 @@ This workflow demonstrates the integration of **semantic chunking, hybrid sparse
 
 The implementation is maintained in a **single Jupyter Notebook** for easy execution and submission.
 
-| Section | Description                                  | Status      |
-| ------- | -------------------------------------------- | ----------- |
+| Section | Description                                  | Status       |
+| ------- | -------------------------------------------- | ------------ |
 | 1       | Assignment Title and Student Details         | ✅ Completed |
 | 2       | Problem Statement                            | ✅ Completed |
 | 3       | Dataset Description and Justification        | ✅ Completed |
@@ -123,13 +123,13 @@ The implementation is maintained in a **single Jupyter Notebook** for easy execu
 | 6       | Model Loading and Local Caching              | ✅ Completed |
 | 7       | Corpus Preparation and Metadata Construction | ✅ Completed |
 | 8       | Task 1 – Chunking Strategies                 | ✅ Completed |
-| 9       | Task 2 – Hybrid Retrieval                    | ⏳ Pending   |
-| 10      | Task 3 – Re-ranking and Context Assembly     | ⏳ Pending   |
-| 11      | Task 4 – Agentic RAG Workflow                | ⏳ Pending   |
-| 12      | Task 5 – Evaluation Framework                | ⏳ Pending   |
-| 13      | Limitations and Future Improvements          | ⏳ Pending   |
-| 14      | Final Conclusion                             | ⏳ Pending   |
-| 15      | References                                   | ⏳ Pending   |
+| 9       | Task 2 – Hybrid Retrieval                    | ✅ Completed |
+| 10      | Task 3 – Re-ranking and Context Assembly     | ✅ Completed |
+| 11      | Task 4 – Agentic RAG Workflow                | ✅ Completed |
+| 12      | Task 5 – Evaluation Framework                | ✅ In Progress |
+| 13      | Limitations and Future Improvements          | ⏳ Pending    |
+| 14      | Final Conclusion                             | ⏳ Pending    |
+| 15      | References                                   | ⏳ Pending    |
 
 ---
 
@@ -223,6 +223,13 @@ After comparing all three chunking approaches, **semantic chunking** was selecte
 * Query reformulation
 * Iterative retrieval workflow
 * Failure recovery strategy
+
+#### Section 12 – Evaluation Framework
+
+* Define evaluation queries and metrics
+* Compare retrieval and reranking performance
+* Validate grounded response quality
+* Document analysis and results
 
 ---
 
