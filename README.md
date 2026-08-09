@@ -46,6 +46,46 @@ advanced-rag-enterprise/
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    A[MedQuAD Dataset] --> B[Corpus Preparation]
+    B --> C[Text Cleaning & Normalization]
+    C --> D[Metadata Construction]
+    D --> E[Semantic Chunking]
+
+    subgraph Retrieval Layer
+        E --> F1[BM25 Sparse Index]
+        E --> F2[SentenceTransformer Embeddings]
+        F2 --> F3[FAISS Dense Index]
+    end
+
+    G[User Query] --> H[Query Processing]
+    H --> I1[BM25 Retrieval]
+    H --> I2[Dense Retrieval]
+
+    I1 --> J[Reciprocal Rank Fusion]
+    I2 --> J
+
+    J --> K[Top-K Candidate Chunks]
+    K --> L[CrossEncoder Re-ranking]
+    L --> M[Evidence Selection]
+    M --> N[Context Assembly]
+
+    subgraph Agentic Layer
+        N --> O[Query Classification]
+        O --> P[Query Reformulation / Iterative Retrieval]
+    end
+
+    P --> Q[Grounded Answer Generation]
+    Q --> R[Evaluation Metrics]
+
+    style A fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style E fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+    style J fill:#FFF8E1,stroke:#F9A825,stroke-width:2px
+    style L fill:#FCE4EC,stroke:#C2185B,stroke-width:2px
+    style Q fill:#EDE7F6,stroke:#512DA8,stroke-width:2px
+```
+
 ## 3.1 Overall Advanced RAG Workflow
 
 The following diagram summarizes the complete workflow implemented in this assignment, starting from MedQuAD corpus ingestion and ending with grounded answer generation and evaluation.
