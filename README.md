@@ -266,9 +266,18 @@ The completed assignment will include:
 
 ## Progress Snapshot
 
-**Overall Completion:** **~45%**
+**Last notebook sync:** 2026-08-09
 
-The foundational work (dataset preparation, model caching, metadata construction, and semantic chunking) has been completed successfully. The remaining work focuses on **retrieval, re-ranking, agentic workflow design, evaluation, and final report polishing**.
+**Overall Completion:** **~55%**
+
+Key updates since last README sync:
+
+- Sections 1–8: ✅ Completed
+- Sections 9–11: ✅ Completed (Hybrid retrieval, re-ranking, and agentic workflow implemented)
+- Section 12: ⚙️ In Progress — evaluation queries defined; retrieval and reranker evaluations are running and partial diagnostics are available in the notebook
+- Sections 13–15: ⏳ Pending (analysis write-up, final conclusion, references)
+
+The foundational work (dataset preparation, model caching, metadata construction, semantic chunking, hybrid retrieval, re-ranking, and agentic workflow) is implemented. The remaining work focuses on completing the evaluation analysis and final report polishing.
 
 ---
 
@@ -277,7 +286,7 @@ The foundational work (dataset preparation, model caching, metadata construction
 When continuing the project, start directly from:
 
 ```
-Section 9 – Task 2: Hybrid Retrieval
+Section 12 – Task 5: Evaluation Framework
 ```
 
-This section will use the previously generated **semantic chunk corpus (`chunks_df`)** as the input for BM25 indexing, FAISS indexing, and hybrid retrieval experiments.
+This section uses the generated `evaluation_queries`, `retrieval_eval_df`, and `rerank_eval_df` artifacts in the notebook for final diagnostics and metric aggregation.
